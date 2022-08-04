@@ -22,24 +22,4 @@ public class UIManager : MonoBehaviour
         _gameScreen.SetActive(false);
         _winScreen.SetActive(true);
     }
-
-    /*public void VisibleCutButton()
-    {
-        _cutButton.SetActive(true);
-    }
-
-    public void UnVisibleCutButton()
-    {
-        _cutButton.SetActive(false);
-    }
-
-    public void VisibleJoystick()
-    {
-        _joystick.SetActive(true);
-    }
-
-    public void UnVisibleJoystick()
-    {
-        _joystick.SetActive(false);
-    }*/
 }

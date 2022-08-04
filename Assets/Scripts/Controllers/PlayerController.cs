@@ -7,11 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Controllers:")]
     [SerializeField] private AnimationController controller;
-    //[SerializeField] private MoveController moveController;
-    //[SerializeField] private Sale sale;
     [Header("Managers:")]
     [SerializeField] private GameManager gameManager;
-    //[SerializeField] private UIManager uIManager;
     [Header("GameObjects:")]
     [SerializeField] private GameObject packageMillet1;
     [SerializeField] private GameObject packageMillet2;
@@ -26,7 +23,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject packageMillet11;
     [SerializeField] private GameObject packageMillet12;
 
-    //public bool _enabled = true;
     public int _costMillet = 0;
 
     public void OnCollisionEnter(Collision collision)
@@ -35,7 +31,6 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent(out Millet millet))
             {
-                //uIManager.UnVisibleJoystick();
                 controller.SetWheatTrigger();
                 StartCoroutine(OffMillet(millet));
                 StartCoroutine(OnMillet(millet));
@@ -68,7 +63,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator OnMillet(Millet millet)
     {
-        //uIManager.VisibleJoystick();
         yield return new WaitForSeconds(10f);
         millet.gameObject.SetActive(true);
     }

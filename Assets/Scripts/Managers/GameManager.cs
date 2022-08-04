@@ -8,11 +8,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [Header("Controllers:")]
-    //[SerializeField] private AnimationController _controller;
     [SerializeField] private PlayerController _playerController;
-    //[SerializeField] private Sale _sale;
-    //[Header("Managers:")]
-    //[SerializeField] private UIManager _manager;
     [Header("TextMeshPro:")]
     [SerializeField] private TextMeshProUGUI _scoreMillet;
     [SerializeField] private TextMeshProUGUI _maxMillet;
@@ -39,27 +35,4 @@ public class GameManager : MonoBehaviour
         _costMilletShop = 0;
         _maxMillet.text = _costMilletShop.ToString() + "/30";
     }
-
-    /*public void CutGrass()
-    {
-
-        if (_playerController._enabled == true)
-        {
-            Debug.Log("Сбор");
-            _controller.SetWheatTrigger();
-            _manager.UnVisibleCutButton();
-            _manager.UnVisibleJoystick();
-            StartCoroutine(VisibleJ());
-        }
-        else
-        {
-            Debug.Log("Подождите!!!");
-        }
-    }
-
-    private IEnumerator VisibleJ()
-    {
-        yield return new WaitForSeconds(5f);
-        _manager.VisibleJoystick();
-    }*/
 }
